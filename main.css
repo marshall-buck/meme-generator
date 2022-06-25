@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .text-center {
   text-align: center;
 }
@@ -10,11 +16,9 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  width: 80vw;
-  margin: 1rem auto;
 }
 form {
-  width: 100%;
+  width: 80%;
 }
 .form-floating {
   padding: 0 1rem;
@@ -51,9 +55,49 @@ button {
   width: 200px;
   cursor: pointer;
   font-size: x-large;
-  margin: 0 auto;
+
   transition: all 0.4s ease-in-out;
 }
 button:hover {
   transform: scale(1.2);
+}
+.meme-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  width: 80;
+  gap: 2rem;
+}
+.meme-card {
+  border-radius: 10px;
+  border: 1px solid brown;
+  width: 400px;
+  height: 600px;
+}
+.relative-holder {
+  position: relative;
+  height: 410px;
+}
+
+.relative-holder p {
+  color: white;
+  z-index: 10;
+}
+.text-holder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-bottom {
+  height: 200px;
 }

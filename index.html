@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meme Generator</title>
-    <link rel="stylesheet" href="main.css" />
-    <script src="main.js" defer></script>
-  </head>
-  <body>
-    <div class="container-center mb-3">
-      <h1 class="text-center">Meme Generator</h1>
-      <form id="meme-gen-form">
-        <div class="form-floating mb-3">
-          <label for="webAddress">Enter web address</label>
-          <input type="url" class="form-control" name="webAddress" />
-        </div>
 
-        <div class="form-floating mb-3">
-          <label for="memeTop">Enter text for top of meme</label>
-          <input
-            type="text"
-            class="form-control"
-            name="memeTop"
-            placeholder="Optional"
-          />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <div class="container-center mb-3">
+    <h1 class="text-center">Meme Generator</h1>
+    <form id="meme-gen-form">
+      <div class="form-floating mb-3">
+        <label for="webAddress">Enter web address</label>
+        <input type="url" class="form-control" name="webAddress" />
+      </div>
+
+      <div class="form-floating mb-3">
+        <label for="memeTop">Enter text for top of meme</label>
+        <input type="text" class="form-control" name="memeTop" placeholder="Optional" />
+      </div>
+      <div class="form-floating mb-3">
+        <label for="memeBottom">Enter text for bottom of meme</label>
+        <input type="text" class="form-control" name="memeBottom" placeholder="Optional" />
+      </div>
+      <div class="container-center">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div id="" class="container-center">
+    <div class="meme-container">
+      <div class="meme-card">
+
+        <div class="relative-holder">
+          <img
+          src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img>
+          <div class="text-holder text-center">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Expedita veniam adipisci omnis officiis magni
+              odit. Iure dolore veniam exercitationem excepturi.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Expedita veniam adipisci omnis officiis magni
+              odit. Iure dolore veniam exercitationem excepturi.</p>
+
+          </div>
         </div>
-        <div class="form-floating mb-3">
-          <label for="memeBottom">Enter text for bottom of meme</label>
-          <input
-            type="text"
-            class="form-control"
-            name="memeBottom"
-            placeholder="Optional"
-          />
-        </div>
-        <div class="container-center">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+            <div class="container-center card-bottom">
+              <button>Delete me</button>
+            </div>
+      </div>
+
     </div>
-    <div class="container-center mb-3"></div>
-  </body>
+  </div>
+</body>
+
 </html>
 <!-- spellchecker: disable -->
 <!-- <div class="position-relative">
@@ -66,10 +82,5 @@
     class="img-fluid"
   />
 </div>
-<div class="col-6">
-  <img
-    src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    alt=""
-    class="img-fluid"
-  />
+
 </div> -->
