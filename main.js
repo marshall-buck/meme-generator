@@ -1,5 +1,5 @@
 const form = document.querySelector('#meme-gen-form');
-const memeHolderRow = document.querySelector('#meme-holder');
+const memesContainer = document.querySelector('.meme-container');
 
 
 
@@ -12,39 +12,58 @@ form.addEventListener('submit', (e) => {
   const memeTop = form.elements.memeTop.value;
 
   const memeBottom = form.elements.memeBottom.value;
-  console.log(url, memeTop, memeBottom);
+
+  if (!url) {
+    window.alert("You need ot enter a url");
+    form.reset();
+    return;
+  }
   appendImage(url, memeTop, memeBottom);
+
+
 
 
   form.reset();
 });
 
 function appendImage(url, memeTop, memeBottom) {
-  const meme = document.createElement('div');
-  meme.setAttribute('class', ' col-4 position-relative');
-  memeHolderRow.append(meme);
-
-
+  // Create card div and append to memesContainer
+  const memeCard = document.createElement('div');
+  memeCard.setAttribute('class', 'meme-card');
+  memesContainer.append(memeCard);
+  // Create holder for image and append to memeCard
+  const relHolder = document.createElement('div');
+  relHolder.setAttribute('class', 'relative-holder');
+  memeCard.append(relHolder);
+  // Cerate img tag and append to relHolder
   const img = document.createElement('img');
   img.setAttribute('src', url);
-  img.setAttribute('class', 'img-fluid ');
-
-  meme.append(img);
-
+  relHolder.append(img);
+  // Create textHolder and append to relHOlder
   const textHolder = document.createElement('div');
-  textHolder.setAttribute('class', 'position-absolute top-0 start-0 bottom-0 end-0 p-3 text-white d-flex flex-column justify-content-between align-items-center');
-  meme.append(textHolder);
-  const topText = document.createElement('p');
-  topText.setAttribute('class', 'text-wrap text-center');
-  topText.innerText = memeTop;
-  textHolder.appendChild(topText);
-  const bottomText = document.createElement('p');
-  bottomText.innerText = memeBottom;
-  bottomText.setAttribute('class', 'text-wrap text-center');
-  textHolder.appendChild(bottomText);
+  textHolder.setAttribute('class', 'text-holder text-center meme-text');
+  relHolder.append(textHolder);
+
+  const topP = document.createElement('p');
+  textHolder.append(topP);
+
+  if (memeTop === '') topP.innerText = '';
+  else topP.innerText = memeTop;
+
+  if (memeBottom !== '') {
+    const bottomP = document.createElement('p');
+    bottomP.innerText = memeBottom;
+    textHolder.append(bottomP);
+  }
 
 
 
 
 
+
+
+}
+
+function deleteMeme(e) {
+  console.log(e);
 }
