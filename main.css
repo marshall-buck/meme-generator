@@ -26,16 +26,18 @@ form {
 
 .form-control {
   padding-top: 0.5rem;
-  color: brown;
+
   display: flex;
 }
 label {
   font-size: x-large;
+  color: brown;
+  padding-left: 0.3rem;
 }
 input[type="text"],
 input[type="url"] {
   border-radius: 10px;
-  height: 36px;
+  height: 45px;
   border: 1px solid brown;
   width: 100%;
   transition: all 0.4s ease-in-out;
@@ -46,6 +48,9 @@ input[type="url"]:focus {
   box-shadow: 2px 2px 20px 2px brown;
   outline: none !important;
   border: 1px solid brown;
+}
+input::placeholder {
+  padding-left: 1rem;
 }
 button {
   background-color: transparent;
@@ -106,9 +111,9 @@ img {
   justify-content: space-evenly;
 }
 
-.range-input {
+.font-change {
   font-size: 1.5rem;
   display: flex;
   gap: 0.8rem;
-  color: brown;
+  color: #a52a2a;
 }
