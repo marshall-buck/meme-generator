@@ -65,20 +65,18 @@ button:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 1rem auto;
   width: 80;
   gap: 2rem;
 }
 .meme-card {
   border-radius: 10px;
-  border: 1px solid brown;
-  width: 400px;
-  height: 600px;
+  border: 2px solid brown;
 }
 .relative-holder {
   position: relative;
-  height: 410px;
+  width: 400px;
 }
 
 .meme-text {
@@ -92,6 +90,7 @@ button:hover {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
 }
 img {
   width: 100%;

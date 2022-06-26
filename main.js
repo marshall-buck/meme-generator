@@ -57,7 +57,7 @@ function appendImage(url, memeTop, memeBottom) {
     textHolder.append(bottomP);
   }
 
-  // Add button wiht event listener
+  // Add button with event listener
   const buttonContainer = document.createElement('div');
   buttonContainer.setAttribute('class', 'container-center card-bottom');
   relHolder.append(buttonContainer);
@@ -76,3 +76,4 @@ function deleteMeme(e) {
   console.log(e.target.parentNode.parentNode.parentNode);
   e.target.parentNode.parentNode.parentNode.remove();
 }
+
