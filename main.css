@@ -82,9 +82,9 @@ button:hover {
 }
 
 .meme-text {
-  color: white;
+  color: red;
   z-index: 10;
-  /* font-size: xx-large; */
+  overflow: hidden;
 }
 .text-holder {
   position: absolute;
@@ -94,7 +94,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 img {
   width: 100%;
