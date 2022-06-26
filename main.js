@@ -73,10 +73,10 @@ function appendImage(url, memeTop, memeBottom) {
   const slider = document.createElement('input');
   slider.type = 'range';
   slider.name = 'font';
-  slider.min = "-4";
-  slider.max = "4";
-  slider.value = "0";
-  slider.step = "1";
+  slider.min = ".25";
+  slider.max = "2";
+  slider.value = "1";
+  slider.step = ".25";
 
   rangeHolder.append(slider);
   slider.addEventListener('input', sliderChange);
@@ -100,7 +100,11 @@ function deleteMeme(e) {
 }
 
 function sliderChange(e) {
-  console.log(e.target.value);
+  console.dir(e.target.parentNode.parentNode.previousElementSibling.lastChild);
+  const text = e.target.parentNode.parentNode.previousElementSibling.lastChild;
+
+  const value = e.target.value * 1.5;
+  text.setAttribute('style', `font-size: ${value}rem;`);
 }
 
 
