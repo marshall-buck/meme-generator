@@ -32,18 +32,20 @@ form {
 label {
   font-size: x-large;
 }
-input {
+input[type="text"],
+input[type="url"] {
   border-radius: 10px;
   height: 36px;
-  border: 1px solid red;
+  border: 1px solid brown;
   width: 100%;
   transition: all 0.4s ease-in-out;
   font-size: 1rem;
 }
-input:focus {
+input[type="text"]:focus,
+input[type="url"]:focus {
   box-shadow: 2px 2px 20px 2px brown;
   outline: none !important;
-  border: 1px solid red;
+  border: 1px solid brown;
 }
 button {
   background-color: transparent;
@@ -82,6 +84,7 @@ button:hover {
 .meme-text {
   color: white;
   z-index: 10;
+  /* font-size: xx-large; */
 }
 .text-holder {
   position: absolute;
@@ -91,6 +94,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+  font-size: 1.5rem;
 }
 img {
   width: 100%;
@@ -99,4 +103,12 @@ img {
 
 .card-bottom {
   height: 200px;
+  justify-content: space-evenly;
+}
+
+.range-input {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 0.8rem;
+  color: brown;
 }

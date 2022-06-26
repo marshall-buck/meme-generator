@@ -77,3 +77,5 @@ function deleteMeme(e) {
   e.target.parentNode.parentNode.parentNode.remove();
 }
 
+
+
